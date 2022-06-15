@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('oefenigens', function (Blueprint $table) {
+        Schema::create('oefeningen', function (Blueprint $table) {
             $table->id();
+            $table->string('naam');
+            $table->text('omschrijving');
+            $table->string('img');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oefenigens');
+        Schema::dropIfExists('oefeningen');
     }
 };

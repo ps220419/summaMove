@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('prestaties', function (Blueprint $table) {
             $table->id();
+            $table->date('datum');
+            $table->time('startTijd');
+            $table->time('eindTijd');
+            $table->integer('aantal');
+            $table->integer('oefening_Id');
+            $table->integer('user_Id');
             $table->timestamps();
         });
     }

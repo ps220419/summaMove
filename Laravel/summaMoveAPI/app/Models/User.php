@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function prestatiesUser(){
+
+        return $this->hasOne(prestaties::class, 'user_Id', 'id');
+    }
 }

@@ -56,6 +56,11 @@ return [
             'channels' => ['single'],
             'ignore_exceptions' => false,
         ],
+        'summaMoveAPI' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/summaMoveAPI.log'),
+            'level' => 'info',
+        ],
 
         'single' => [
             'driver' => 'single',

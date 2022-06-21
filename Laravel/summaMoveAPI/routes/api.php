@@ -21,4 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('oefenings', OefeningenController::class)
-    ->parameters(['oefenings' => 'oefeningen'])->only(['index']);
+    ->parameters(['oefenings' => 'oefeningen'])->only(['index']
+);
+
+

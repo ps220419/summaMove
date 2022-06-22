@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap);
+
+body {
+    background-color: rgb(132, 101, 218);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    overflow-X: hidden;
+}
+
+#navul {
+    height: 50px;
+    background-color: rgb(96, 57, 186);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    filter: drop-shadow(1px 1px 20px rgba(0, 0, 0, 0.705));
+    font-size: 22px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.navitem {
+    display: block;
+    margin-left: 0;
+    width: auto;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+    background-color: rgb(96, 57, 186);
+    transition-property: background-color, filter;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    overflow: visible;
+}
+
+.navitem:hover {
+    background-color: rgb(154, 127, 218);
+    cursor: pointer;
+    filter: drop-shadow(0px 25px 20px rgba(154, 127, 218, 0.877));
+}
+
+.navselected {
+    background-color: rgb(139, 89, 255) !important;
+    filter: drop-shadow(1px 15px 20px rgb(129, 82, 240)) !important;
+}
+
+#navul > li > p {
+    text-align: center;
+    height: 30px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+}
+
+#spnav {
+    text-align: center;
+    display: inline-block;
+    margin-top: 8px !important;
+    margin-bottom: 0px;
+}
+
+
+#navul > li > a {
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hoverbox {
+    background-color: rgb(139, 89, 255);
+    height: 0px;
+    width: 100%;
+    display: none;
+    z-index: 2;
+    position: absolute;
+    margin-left: -20px;
+}
+
+.hoverdiv:hover .hoverbox {
+    display: block;
+    height: auto;
+}
+
+.hoverbox-content {
+    background-color: rgb(139, 89, 255);
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0));
+    
+}
+
+.hoverbox-content:hover {
+    background-color: rgb(154, 127, 218);
+    transition-property: background-color, filter;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+    filter: drop-shadow(0px 10px 8px rgba(154, 127, 218, 0.877));
+}
+
+.hoverbox-content > p {
+    height: auto;
+    width: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#homebtn {
+    width: 55px !important;
+    padding: 0px !important;
+}
+
+#content {
+    width: 80%;
+    overflow: hidden;
+    background-color: rgb(112, 89, 197);
+    margin-left: 10%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    filter: drop-shadow(0px 35px 16px rgba(0, 0, 0, 0.452))
+}
+
+#contentcontainer {
+    margin: 75px 0px 0px 15px;
+}
+
+.partijcontainer {
+    border: rgb(85, 31, 134) 2px solid;
+    background-color: rgba(98, 49, 189, 0.267);
+    width: 15%;
+    border-radius: 10px;
+    display: flex;  
+    justify-content: center;
+    margin-bottom: 10px;
+    transition-property: background-color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+}
+
+.partijcontainer:hover {
+    background-color: rgb(98, 49, 189);
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@
         <li class="navitem navselected" id="homebtn"><p>⌂</p></li>
         <li class="navitem hoverdiv">
                 
-            <a href="partijen.php"><p id="spnav">placeholder1</p></a>
+            <p id="spnav">placeholder1</p>
                 
             <div class="hoverbox"> 
 

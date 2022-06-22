@@ -1,18 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 
-function SummaTabs() {
+import AboutScreen from './components/AboutScreen';
+import HomeScreen from './components/HomeScreen';
+
+const Stack = createStackNavigator();
+
+function SummaStack() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="about" component={AboutScreen} />
-    </Tab.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen name="stackAbout" component={AboutScreen} />
+      
+    </Stack.Navigator>
   );
 }
 
 const Tab = createMaterialBottomTabNavigator();
+
+function SummaTabs() {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen name="tabHome" component={HomeScreen} />
+      <Tab.Screen name="tabSumma" component={SummaStack} />
+    </Tab.Navigator>
+  );
+}
 
 const App = () => {
   return (

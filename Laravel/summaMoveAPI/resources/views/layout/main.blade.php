@@ -1,1 +1,1 @@
-@include('layout.app')
+@extends('layout.app')

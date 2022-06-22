@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap);
 
 body {
-    background-color: rgb(132, 101, 218);
-    color: white;
+    background-color: rgba(48, 52, 63, 1);
+    color: rgba(30, 39, 73, 1);
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     overflow-X: hidden;
@@ -10,7 +10,7 @@ body {
 
 #navul {
     height: 50px;
-    background-color: rgb(96, 57, 186);
+    background-color: rgba(250, 250, 255, 1);
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -23,27 +23,30 @@ body {
 .navitem {
     display: block;
     margin-left: 0;
+    color: rgba(30, 39, 73, 1);
     width: auto;
     height: 50px;
     padding-left: 20px;
     padding-right: 20px;
     float: left;
-    background-color: rgb(96, 57, 186);
-    transition-property: background-color, filter;
+    background-color: rgba(250, 250, 255, 1);
+    transition-property: background-color, filter, color;
     transition-duration: 300ms;
     transition-timing-function: ease;
     overflow: visible;
 }
 
 .navitem:hover {
-    background-color: rgb(154, 127, 218);
+    color: white !important;
+    background-color: rgba(30, 39, 73, 1);
     cursor: pointer;
-    filter: drop-shadow(0px 25px 20px rgba(154, 127, 218, 0.877));
+    filter: drop-shadow(0px 25px 20px rgba(30, 39, 73, 0.877));
 }
 
 .navselected {
-    background-color: rgb(139, 89, 255) !important;
-    filter: drop-shadow(1px 15px 20px rgb(129, 82, 240)) !important;
+    color: white !important;
+    background-color: rgba(39, 52, 105, 1) !important;
+    filter: drop-shadow(1px 15px 20px rgba(39, 52, 105, 1)) !important;
 }
 
 #navul > li > p {
@@ -117,7 +120,7 @@ body {
 #content {
     width: 80%;
     overflow: hidden;
-    background-color: rgb(112, 89, 197);
+    background-color: rgba(228, 217, 255, 1);
     margin-left: 10%;
     height: 100%;
     position: absolute;

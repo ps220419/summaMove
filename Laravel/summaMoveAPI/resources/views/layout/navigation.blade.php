@@ -19,16 +19,7 @@
                     <p>placeholder4</p>
                 </div>
 
-                <!-- 
-                    @foreach($rows as $row) 
-
-                        echo "
-                            <div onclick=redirect('Partijen.php?id=$row[PartijId]') class='hoverbox-content'>
-                            <p>$row[PartijName]</p>
-                            </div>
-                        ";
-                    }
-                -->
+              
             </div>
         </li>
     <li class="navitem"><p>placeholder2</p></li>

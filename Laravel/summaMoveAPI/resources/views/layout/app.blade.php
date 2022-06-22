@@ -13,7 +13,7 @@
 
         <div id="content">
             <div id="contentcontainer">
-                {{ $slot }}
+               
             </div>
         </div>
     </body>

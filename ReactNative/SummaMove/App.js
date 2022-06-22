@@ -3,6 +3,10 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+
+import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
 
 import AboutScreen from './components/AboutScreen';
 import HomeScreen from './components/HomeScreen';

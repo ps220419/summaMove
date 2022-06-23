@@ -21,7 +21,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('oefenings', OefeningenController::class)
-    ->parameters(['oefenings' => 'oefeningen'])->only(['index']
-);
+    ->parameters(['oefenings' => 'oefeningen'])->only(['index']);
+    
+Route::post('/register', [AuthenticationController::class, 'register']);
+Route::post('/login', [AuthenticationController::class, 'login']);
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
 
+    Route::apiResource('oefenings', OefeningenController::class)
+    ->parameters(['oefenings' => 'oefeningen'])->except(['index']);
+
+    Route::delete('oefenings/delete/{id}',[OefeningenController::class,'delete']);
+
+});

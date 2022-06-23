@@ -11,6 +11,14 @@ class oefeningen extends Model
 
     protected $table = 'oefeningen';
 
+    public $fillable=[  //in this array you declare all of your table collumns.
+        'naamNL',
+        'naamEN',
+        'omschrijvingNL',
+        'omschrijvingEN',
+        'img'
+    ];
+
     public function prestatiesOefeningen(){
 
         return $this->hasOne(prestaties::class, 'oefening_Id', 'id');

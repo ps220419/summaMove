@@ -15,4 +15,30 @@ class OefeningenController extends Controller
         
         return oefeningen::All();
     }
+
+    public function update(Request $request, oefeningen $oefeningen)
+    {
+        \Log::channel('apiLog')->info('PUT/PATCH selected and updated');
+
+        $validator = Validator::make($request->all(), [
+            'naamNL' => 'required',
+            'omschrijvingNL' => 'required',
+            'naamEN' => 'required',
+            'omschrijvingEN' => 'required', 
+            'img' => 'required',         
+        ]);
+ 
+        if ($validator->fails()) {
+            return response('{"Foutmelding":"Data niet correct"}', 400)
+                ->header('Content-Type','application/json');
+
+        }
+        else $oefeningen->update($request->all());
+        return $oefeningen;
+    }
+    
+    public function delete($id){
+        oefeningen::where('id',$id)->delete();
+        \Log::channel('apiLog')->info('Deleted oefeningen from db');
+    }
 }

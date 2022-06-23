@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('naamEN');
             $table->text('omschrijvingNL');
             $table->text('omschrijvingEN');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }

@@ -6,6 +6,7 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import HomeScreen from './components/HomeScreen';
 import AboutScreen from './components/AboutScreen';
+import LoginScreen from './components/LoginScreen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -13,6 +14,7 @@ function MyTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
+       <Tab.Screen name="Login" component={LoginScreen} />
       <Tab.Screen name="About" component={AboutScreen} />
     </Tab.Navigator>
   );

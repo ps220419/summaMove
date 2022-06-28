@@ -16,6 +16,26 @@ class OefeningenController extends Controller
         return oefeningen::All();
     }
 
+    public function store(Request $request)
+    {
+        Log::channel('apiLog')->info('Post new creation requested');
+
+        $validator = Validator::make($request->all(), [
+            'naamNL' => 'required',
+            'omschrijvingNL' => 'required',
+            'naamEN' => 'required',
+            'omschrijvingEN' => 'required', 
+            'img' => 'required',         
+        ]);
+ 
+        if ($validator->fails()) {
+            return response('{"Foutmelding":"Data niet correct"}', 400)
+                ->header('Content-Type','application/json');
+
+        }
+        else return oefeningen::create($request->all());
+    }
+
     public function update(Request $request, oefeningen $oefeningen)
     {
         \Log::channel('apiLog')->info('PUT/PATCH selected and updated');

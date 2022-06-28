@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OefeningenController;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\PrestatiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +34,14 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::delete('oefenings/delete/{id}',[OefeningenController::class,'delete']);
 
+      Route::apiResource('prestaties', PrestatiesController::class)
+    ->parameters(['prestaties' => 'prestatie'])->except(['index']);
+    
+    Route::delete('prestaties/delete/{id}',[PrestatiesController::class,'delete']);
+
+
 });
+
+Route::apiResource('prestaties', PrestatiesController::class)
+    ->parameters(['prestaties' => 'prestatie'])->only(['index']);
+

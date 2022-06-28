@@ -19,8 +19,8 @@ return new class extends Migration
             $table->time('startTijd');
             $table->time('eindTijd');
             $table->integer('aantal');
-            $table->integer('oefening_Id');
-            $table->integer('user_Id');
+            $table->integer('oefening_Id')->default('1');
+            $table->integer('user_Id')->default('1');
             $table->timestamps();
         });
     }

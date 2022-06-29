@@ -30,8 +30,9 @@ class PrestatiesController extends Controller
         else return prestaties::create($request->all());
     }
 
-    public function update(Request $request, prestaties $prestaties)
+    public function update(Request $request, prestaties $prestatie)
     {
+        // dd($request, $prestatie);
         \Log::channel('apiLog')->info('PUT/PATCH selected and updated');
 
         $validator = Validator::make($request->all(), [
@@ -48,8 +49,8 @@ class PrestatiesController extends Controller
                 ->header('Content-Type','application/json');
 
         }
-        else $prestaties->update($request->all());
-        return $prestaties;
+        else $prestatie->update($request->all());
+        return $prestatie;
     }
     
     public function delete($id){
